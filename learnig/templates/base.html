@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "bootstrap/base.html" %}
+
+<html>
     {% if title %}
         <title>{{ title }}</title>
     {% else %}
         <title>DEFULT FLASK TITLE</title>
     {% endif %}
-    <h1>Hello world!</h1>
-</head>
-<body>
-    {% include 'navbar.html' %} <!--可以引入其他的html-->
-    This is a base html file.
-    <h3> In base.html you can create a block: </h3>
-    {% block content %} <!--一般内容留空，因为这个块里面的内容会被子模块覆盖掉-->
-        <h3>PARENT TEMPLATE.</h3>
+
+    {% block navbar %}
+        {% include 'navbar.html' %} <!--可以引入其他的html-->
     {% endblock %}
-</body>
+
+    {% block content %}
+        <div class="container">
+            {% block app_content %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+
 </html>
+
