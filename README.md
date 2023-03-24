@@ -297,8 +297,18 @@ if __name__=='__main__':
 
 ****flask bootstrap 是一个插件，是用于优化页面布局的。****
 
----
-
 ### 实战：用Flask开发一个比较大的博客网站
 
 ****7 - Flask-SQLAlchemy 简介和创建用户模型****
+
+---
+
+YOLOv5 + Flask - Object Detection
+Aim: To detect in video and images, through Yolov5, with Flask at frontend to upload the files.
+
+Requiments:
+1. python
+2. flask
+3. YOLOv5(pytorch)
+
+

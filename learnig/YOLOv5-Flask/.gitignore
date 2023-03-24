@@ -1,0 +1,7 @@
+venv/
+.vscode
+#*.jpg
+static/tmp.jpg
+*.pyc
+.github
+.idea
