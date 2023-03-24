@@ -58,7 +58,8 @@ if __name__=='__main__':
 ****6 - 利用 flask bootstrap 来优化布局****
 
 ****flask bootstrap 是一个插件，是用于优化页面布局的。****
-
+result:
+![img.png](img.png)
 ---
 
 ### 实战：用Flask开发一个比较大的博客网站
