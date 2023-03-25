@@ -312,3 +312,33 @@ Requiments:
 3. YOLOv5(pytorch)
 
 
+---
+
+# Docker
+### 构建自己的镜像
+
+`test-docker` 项目的环境、软件、依赖全部打包成docker file。
+
+### ****目录挂载****
+
+目录挂载的几种方式
+
+1. `bind mount` 直接把宿主机目录映射到容器内，适合挂代码目录和配置文件。可挂到多个容器上
+2. `volume` 官方推荐，由容器创建和管理，创建在宿主机，所以删除容器不会丢失。更高效，Linux 文件系统，适合存储数据库数据。可挂到多个容器上
+3. `tmpf mount` 很少用，适合存储临时文件，存宿主机内存中。不可多容器共享。
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ca3f1aac-2fb6-4226-b2a2-04525bcd70ec/Untitled.png)
+
+不同挂载方式
+
+`bind mount` 方式用绝对路径 `-v D:/code:/app`
+
+`volume` 方式，只需要一个字 `-v db-data:/app`
+
+### 多容器通信
+
+要想多容器之间互通，从 Web 容器访问 Redis 容器，我们只需要把他们放到同个网络中就可以了。
+
+步骤：
+
+1. 创建虚拟网络
+2. 把容器连通起来
