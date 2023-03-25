@@ -1,11 +1,12 @@
-FROM python:3.7-slim-buster
+FROM python:3.8.16-slim-buster
+MAINTAINER liyijiadou
 
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y
 
 WORKDIR /app
 ADD . /app
-RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
