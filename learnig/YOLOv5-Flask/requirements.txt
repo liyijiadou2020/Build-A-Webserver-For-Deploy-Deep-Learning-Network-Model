@@ -1,5 +1,5 @@
 coremltools==6.2
-Flask==2.2.3
+flask==2.2.2
 matplotlib==3.7.1
 numpy==1.23.5
 onnx==1.13.1
