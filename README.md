@@ -1,3 +1,52 @@
+# 项目步骤
+
+1. 本地部署
+2. 确保运行无误
+    仓库里已经存放了yolov5s.pt文件，无需额外下载模型文件。</br>
+    在终端运行python webapp.py，稍等片刻，即可访问 http://127.0.0.1:5000</br>
+    预测后的图片会保存在static文件夹下。
+3. 云端部署 - Docker
+    1. 生成requirements.txt
+        使用pipreqs库，用命令`pipreqs . --encoding=utf8 --force`即可
+    ```python
+        # python 3.8.16
+        coremltools==6.2
+        Flask==2.2.3
+        matplotlib==3.7.1
+        numpy==1.23.5
+        onnx==1.13.1
+        opencv_python==4.7.0.72
+        pafy==0.5.5
+        pandas==1.5.3
+        Pillow==9.4.0
+        PyYAML==6.0
+        requests==2.28.2
+        scipy==1.10.1
+        seaborn==0.12.2
+        thop==0.1.1.post2209072238
+        torch==2.0.0
+        torchvision==0.15.1
+        tqdm==4.65.0
+    ```
+    2. 构建 Docker File
+    3. Docker 打包上传
+    4. Docker 镜像拉取
+    5. Docker 创建容器并启动
+    6. 访问网址，查看运行效果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Flask 项目部署 bilibili
 
 地址
@@ -342,3 +391,6 @@ Requiments:
 
 1. 创建虚拟网络
 2. 把容器连通起来
+
+---
+
